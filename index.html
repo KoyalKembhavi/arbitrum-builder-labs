@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArbiLearn - Explore Web3 & Arbitrum</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">⛓ <span>ArbiLearn</span></a>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="concepts.html">Concepts</a></li>
+      <li><a href="prices.html">Live Prices</a></li>
+      <li><a href="simulator.html">Simulator</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Explore Web3 with <span>ArbiLearn</span></h1>
+      <p>Discover the future of decentralized technology. Learn about blockchain, Layer 2 scaling, and how Arbitrum is making Ethereum faster and more affordable for everyone.</p>
+      <a href="concepts.html" class="btn btn-primary btn-large">Explore Concepts →</a>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section">
+      <div class="section-title">
+        <h2>Core Web3 Concepts</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>🔗 Decentralization</h3>
+          <p>Decentralization removes control from a single authority and distributes it across a network. No central point of failure, no censorship, and full user ownership of data and assets.</p>
+        </div>
+        <div class="card">
+          <h3>⚡ Arbitrum L2</h3>
+          <p>Arbitrum is a Layer 2 scaling solution for Ethereum. It processes transactions off-chain and posts compressed data to Ethereum mainnet, achieving 10-40x lower fees while maintaining security.</p>
+        </div>
+        <div class="card">
+          <h3>📜 Smart Contracts</h3>
+          <p>Self-executing programs that run on blockchains. They automatically enforce agreements when conditions are met, powering DeFi, NFTs, DAOs, and countless decentralized applications.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Arbitrum Explainer Section -->
+    <section class="section">
+      <div class="section-title">
+        <h2>Why Arbitrum Matters</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>🐌 Why Ethereum Needed Layer 2</h3>
+          <p>Ethereum mainnet can only process ~15 transactions per second. During high demand, gas fees spike to $50-$100+ per transaction. Layer 2 solutions like Arbitrum solve this scalability crisis.</p>
+        </div>
+        <div class="card">
+          <h3>🚀 What Arbitrum Is</h3>
+          <p>Arbitrum uses Optimistic Rollup technology. It "rolls up" hundreds of transactions into a single batch, posts them to Ethereum, and inherits Ethereum's security while processing transactions faster and cheaper.</p>
+        </div>
+        <div class="card">
+          <h3>💡 Real-World Benefit</h3>
+          <p>On Arbitrum, a swap that costs $50 on Ethereum mainnet costs under $1. Same security, same Ethereum ecosystem — just faster and affordable for everyday users.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Built by <strong>Koyal Kembhavi</strong></p>
+    <p>
+      <a href="https://github.com/KoyalKembhavi" target="_blank" rel="noopener">
+        <span style="color: var(--accent);">GitHub</span>
+      </a>
+      &bull;
+      <a href="https://github.com/KoyalKembhavi/arbitrum-builder-labs" target="_blank" rel="noopener">
+        <span style="color: var(--accent);">GitHub Repo</span>
+      </a>
+      &bull; Arbitrum Builder Labs by LamprosDAO
+    </p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
