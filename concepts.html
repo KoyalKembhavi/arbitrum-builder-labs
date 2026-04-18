@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web3 Concepts - ArbiLearn</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">⛓ <span>ArbiLearn</span></a>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="concepts.html" class="active">Concepts</a></li>
+      <li><a href="prices.html">Live Prices</a></li>
+      <li><a href="simulator.html">Simulator</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <section class="hero">
+      <h1>Core <span>Web3 Concepts</span></h1>
+      <p>Understand the fundamentals through side-by-side comparisons</p>
+    </section>
+
+    <!-- Comparison Cards Section -->
+    <section class="section">
+      <div class="grid grid-2">
+
+        <!-- Card 1: Web2 vs Web3 -->
+        <div class="card comparison-card">
+          <div class="comparison-side">
+            <h3>🏢 Web2</h3>
+            <ul class="comparison-list">
+              <li>❌ Centralized control</li>
+              <li>❌ Company-owned servers</li>
+              <li>❌ Users are the product</li>
+              <li>❌ Data in private databases</li>
+              <li>❌ Permission required</li>
+            </ul>
+          </div>
+          <div class="vs-divider">VS</div>
+          <div class="comparison-side">
+            <h3>🌐 Web3</h3>
+            <ul class="comparison-list">
+              <li>✅ Decentralized network</li>
+              <li>✅ Blockchain-based</li>
+              <li>✅ User-owned data</li>
+              <li>✅ Transparent & verifiable</li>
+              <li>✅ Permissionless access</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card 2: Ethereum vs Bitcoin -->
+        <div class="card comparison-card">
+          <div class="comparison-side">
+            <h3>₿ Bitcoin</h3>
+            <ul class="comparison-list">
+              <li>💰 Digital currency</li>
+              <li>🏦 Store of value ("digital gold")</li>
+              <li>📝 Simple transactions</li>
+              <li>⛏️ Proof of Work (PoW)</li>
+              <li>🔒 Limited scripting</li>
+            </ul>
+          </div>
+          <div class="vs-divider">VS</div>
+          <div class="comparison-side">
+            <h3>Ξ Ethereum</h3>
+            <ul class="comparison-list">
+              <li>💻 Programmable blockchain</li>
+              <li>📜 Smart contracts</li>
+              <li>🎮 DApps & DeFi platform</li>
+              <li>🌱 Proof of Stake (PoS)</li>
+              <li>🔧 Turing-complete</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card 3: Public Key vs Private Key -->
+        <div class="card comparison-card">
+          <div class="comparison-side">
+            <h3>🔓 Public Key</h3>
+            <ul class="comparison-list">
+              <li>📍 Like your bank account number</li>
+              <li>✅ Safe to share publicly</li>
+              <li>📥 Used to receive funds</li>
+              <li>🔗 Derives your wallet address</li>
+              <li>👀 Visible on blockchain</li>
+            </ul>
+          </div>
+          <div class="vs-divider">VS</div>
+          <div class="comparison-side">
+            <h3>🔐 Private Key</h3>
+            <ul class="comparison-list">
+              <li>🔑 Like your password/PIN</li>
+              <li>⚠️ NEVER share it</li>
+              <li>✍️ Used to sign transactions</li>
+              <li>💀 If lost = funds lost forever</li>
+              <li>🛡️ Controls your assets</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card 4: Blockchain vs Traditional Database -->
+        <div class="card comparison-card">
+          <div class="comparison-side">
+            <h3>🗄️ Traditional Database</h3>
+            <ul class="comparison-list">
+              <li>🏢 Centralized control</li>
+              <li>✏️ Editable by admin</li>
+              <li>🤝 Requires trust in operator</li>
+              <li>⚠️ Single point of failure</li>
+              <li>🔒 Closed & proprietary</li>
+            </ul>
+          </div>
+          <div class="vs-divider">VS</div>
+          <div class="comparison-side">
+            <h3>⛓️ Blockchain</h3>
+            <ul class="comparison-list">
+              <li>🌐 Decentralized network</li>
+              <li>🔒 Immutable (write-once)</li>
+              <li>✓ Trustless verification</li>
+              <li>✅ No single point of failure</li>
+              <li>📖 Transparent & open</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Built by <strong>Koyal Kembhavi</strong></p>
+    <p>
+      <a href="https://github.com/KoyalKembhavi" target="_blank" rel="noopener">
+        <span style="color: var(--accent);">GitHub</span>
+      </a>
+      &bull;
+      <a href="https://github.com/KoyalKembhavi/arbitrum-builder-labs" target="_blank" rel="noopener">
+        <span style="color: var(--accent);">GitHub Repo</span>
+      </a>
+      &bull; Arbitrum Builder Labs by LamprosDAO
+    </p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
