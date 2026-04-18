@@ -4,10 +4,21 @@ A 4-page educational Web3 website built for the Arbitrum Builder Labs assignment
 
 ## Screenshots
 
-- `screenshots/home.png`
+Home Page:
+![Home Page](screenshots/home.png)
+
+Concepts Page:
+![Concepts Page](screenshots/concepts.png)
+
+Live Prices Page:
+![Live Prices](screenshots/prices.png)
+
+Block Mining Simulator:
+![Block Simulator](screenshots/simulator.png)
+<!-- - `screenshots/home.png`
 - `screenshots/concepts.png`
 - `screenshots/prices.png`
-- `screenshots/simulator.png`
+- `screenshots/simulator.png` -->
 
 ## Pages
 
