@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Crypto Prices - ArbiLearn</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">⛓ <span>ArbiLearn</span></a>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="concepts.html">Concepts</a></li>
+      <li><a href="prices.html" class="active">Live Prices</a></li>
+      <li><a href="simulator.html">Simulator</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <section class="hero">
+      <h1>Live <span>Crypto Prices</span></h1>
+      <p>Real-time data powered by CoinGecko API</p>
+      <button class="btn btn-primary" id="refresh-button" onclick="fetchPrices()">
+        🔄 Refresh
+      </button>
+    </section>
+
+    <section class="section">
+      <div id="loading" class="loading-container">
+        <div class="spinner"></div>
+        <p>Fetching prices...</p>
+      </div>
+
+      <div id="error-message" class="error-message" style="display: none;">
+        <div class="card" style="text-align: center;">
+          <h3>⚠️ Unable to load prices</h3>
+          <p id="error-text">An error occurred while fetching data.</p>
+          <button class="btn btn-primary" onclick="fetchPrices()">Try Again</button>
+        </div>
+      </div>
+
+      <div id="prices-container" class="grid grid-3">
+        <!-- Price cards will be injected here by JavaScript -->
+      </div>
+    </section>
+
+    <p class="data-note" style="text-align: center; color: var(--text-secondary); font-size: 0.9rem;">
+      Data from CoinGecko API · Updates on refresh
+    </p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Built by <strong>Koyal Kembhavi</strong></p>
+    <p>
+      <a href="https://github.com/KoyalKembhavi" target="_blank" rel="noopener">
+        <span style="color: var(--accent);">GitHub</span>
+      </a>
+      &bull;
+      <a href="https://github.com/KoyalKembhavi/arbitrum-builder-labs" target="_blank" rel="noopener">
+        <span style="color: var(--accent);">GitHub Repo</span>
+      </a>
+      &bull; Arbitrum Builder Labs by LamprosDAO
+    </p>
+  </footer>
+
+  <script src="prices.js"></script>
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

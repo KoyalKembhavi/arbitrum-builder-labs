@@ -1,0 +1,794 @@
+/* =============================================
+   ArbiLearn - Web3 Educational Platform
+   Dark Theme Stylesheet
+   ============================================= */
+
+/* --- CSS Variables --- */
+:root {
+  --bg-primary: #0d0d0d;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #252525;
+  --accent: #00d4ff;
+  --accent-hover: #00b8e6;
+  --text-primary: #f0f0f0;
+  --text-secondary: #b0b0b0;
+  --border-color: #333333;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --shadow-hover: 0 8px 30px rgba(0, 212, 255, 0.15);
+  --transition: all 0.3s ease;
+  --radius: 12px;
+  --radius-sm: 8px;
+}
+
+/* --- Reset & Base --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+
+p {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+/* --- Navigation --- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.75rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar .logo span {
+  color: var(--accent);
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.navbar .nav-links a {
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.navbar .nav-links a:hover {
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+}
+
+.navbar .nav-links a.active {
+  color: var(--bg-primary);
+  background: var(--accent);
+}
+
+.navbar .hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.navbar .hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+/* --- Main Content --- */
+main {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* --- Hero Section --- */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+  border-radius: var(--radius);
+  margin-bottom: 2rem;
+  border: 1px solid var(--border-color);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero h1 span {
+  color: var(--accent);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+/* --- Cards --- */
+.card {
+  background: var(--bg-secondary);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+/* --- Comparison Cards --- */
+.comparison-card {
+  display: flex;
+  align-items: stretch;
+  padding: 0;
+  overflow: hidden;
+}
+
+.comparison-card .comparison-side {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.comparison-card .comparison-side:first-child {
+  border-right: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.comparison-card .vs-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 1.25rem;
+  background: var(--bg-tertiary);
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+}
+
+.comparison-card h3 {
+  text-align: center;
+  margin-bottom: 1.25rem;
+  font-size: 1.3rem;
+}
+
+.comparison-list {
+  list-style: none;
+  padding: 0;
+}
+
+.comparison-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.comparison-list li:last-child {
+  border-bottom: none;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent);
+}
+
+.card h3 {
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+/* --- Grid Layouts --- */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--bg-primary);
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
+}
+
+.btn-secondary {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background: var(--border-color);
+  border-color: var(--accent);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+/* --- Section Styles --- */
+.section {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-title h2 {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* --- Price Cards --- */
+.price-card {
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.price-card .crypto-icon {
+  font-size: 3rem;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.price-card .crypto-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.price-card .crypto-symbol {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.price-card .crypto-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  font-family: 'Courier New', monospace;
+  margin-bottom: 0.5rem;
+}
+
+.price-card .crypto-change {
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.price-card .crypto-change.positive {
+  color: #00ff88;
+}
+
+.price-card .crypto-change.negative {
+  color: #ff4757;
+}
+
+.block-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.block-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.block-header h3 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.input-group input {
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.input-group input[readonly] {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.hash-output {
+  font-family: 'Courier New', monospace;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-secondary);
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  min-height: 3rem;
+  word-break: break-all;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.status-badge.success {
+  color: #00ff88;
+  background: rgba(0, 255, 136, 0.12);
+}
+
+.status-badge.error {
+  color: #ff7373;
+  background: rgba(255, 71, 87, 0.12);
+}
+
+.status-badge.warning {
+  color: var(--accent);
+  background: rgba(0, 212, 255, 0.12);
+}
+
+.explainer-box {
+  margin-top: 2rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.mining-message {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar .hamburger {
+    display: flex;
+  }
+
+  .navbar .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    flex-direction: column;
+    width: calc(100% - 2rem);
+    max-width: 320px;
+    padding: 1rem;
+    display: none;
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+  }
+
+  .navbar .nav-links a {
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+
+  .hero {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+/* --- Loading & Error States --- */
+.loading-container {
+  text-align: center;
+  padding: 3rem;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-container p {
+  margin-top: 1rem;
+  color: var(--text-secondary);
+}
+
+.error-message {
+  margin-bottom: 2rem;
+}
+
+.data-note {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* --- Simulator Styles --- */
+.simulator-container {
+  background: var(--bg-secondary);
+  border-radius: var(--radius);
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.mining-display {
+  background: var(--bg-primary);
+  border-radius: var(--radius-sm);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Courier New', monospace;
+  border: 1px solid var(--border-color);
+}
+
+.mining-display .block-hash {
+  font-size: 0.9rem;
+  color: var(--accent);
+  word-break: break-all;
+  margin-bottom: 1rem;
+}
+
+.mining-display .mining-status {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.mining-display .mining-status.mining {
+  color: var(--accent);
+}
+
+.mining-display .mining-status.success {
+  color: #00ff88;
+}
+
+.mining-display .progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.mining-display .progress-fill {
+  height: 100%;
+  background: var(--accent);
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.mining-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.mining-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.stat-box {
+  background: var(--bg-tertiary);
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+.stat-box .stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.stat-box .stat-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+}
+
+/* --- Footer --- */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+/* --- Loading Spinner --- */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--bg-tertiary);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 2rem auto;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar .hamburger {
+    display: flex;
+  }
+
+  .navbar .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-secondary);
+    flex-direction: column;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .navbar .nav-links.active {
+    max-height: 250px;
+    padding: 0.5rem 0;
+  }
+
+  .navbar .nav-links a {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0;
+  }
+
+  .navbar .nav-links a:hover,
+  .navbar .nav-links a.active {
+    background: var(--bg-tertiary);
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.25rem; }
+
+  .mining-controls {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  /* Stack comparison cards vertically on mobile */
+  .comparison-card {
+    flex-direction: column;
+  }
+
+  .comparison-card .comparison-side:first-child {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .comparison-card .vs-divider {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .price-card .crypto-price {
+    font-size: 1.5rem;
+  }
+}
